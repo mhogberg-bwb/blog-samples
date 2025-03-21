@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "articleId": 1,
+    "author": "Robin Taylor",
+    "avatar": "default-avatar.jpg",
+    "content": "This is a fascinating overview of AI's integration into daily life. I'm particularly interested in the balance between convenience and privacy - how do you think we can maximize the benefits while addressing the very real concerns about data collection?",
+    "date": "2025-02-15T14:22:00Z",
+    "likes": 7
+  },
+  {
+    "id": 2,
+    "articleId": 1,
+    "author": "Sam Johnson",
+    "avatar": "default-avatar.jpg",
+    "content": "I've been using smart home devices for about two years now, and while I appreciate the convenience, I've definitely noticed how they're becoming more predictive of my habits. Both impressive and slightly unnerving at the same time!",
+    "date": "2025-02-16T09:15:00Z",
+    "likes": 4
+  },
+  {
+    "id": 3,
+    "articleId": 2,
+    "author": "Taylor Reed",
+    "avatar": "default-avatar.jpg",
+    "content": "Great article! I recently visited Copenhagen and was amazed by their cycling infrastructure. The way they've integrated sustainable transportation into the city design should really be a model for urban planners everywhere.",
+    "date": "2025-03-03T19:40:00Z",
+    "likes": 9
+  },
+  {
+    "id": 4,
+    "articleId": 3,
+    "author": "Jamie Wilson",
+    "avatar": "default-avatar.jpg",
+    "content": "I've found myself drawn back to film photography after years of exclusively using digital. There's something about the process—the limited shots, the anticipation of developing—that makes me more intentional about my photography. Great to see this wider trend explored!",
+    "date": "2025-03-10T16:32:00Z",
+    "likes": 5
+  },
+  {
+    "id": 5,
+    "articleId": 3,
+    "author": "Casey Palmer",
+    "avatar": "default-avatar.jpg",
+    "content": "Interesting perspective on why we seek out analog experiences. I've noticed this in my own life too - spend all day on computers at work, but unwind with paper books and board games. It definitely feels like seeking balance rather than rejecting technology outright.",
+    "date": "2025-03-11T10:17:00Z",
+    "likes": 3
+  },
+  {
+    "id": 6,
+    "articleId": 5,
+    "author": "Morgan Silva",
+    "avatar": "default-avatar.jpg",
+    "content": "The ocean cleanup technologies mentioned here give me hope. I volunteered for a beach cleanup last month and was disheartened by the amount of plastic we collected in just a few hours. It's good to know there are larger scale efforts happening alongside community initiatives.",
+    "date": "2025-01-23T14:05:00Z",
+    "likes": 6
+  }
+]

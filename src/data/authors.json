@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Morgan",
+    "avatar": "alex-morgan.jpg",
+    "bio": "Technology journalist and AI researcher with a focus on the social implications of emerging technologies.",
+    "social": {
+      "twitter": "alexmorgantech",
+      "linkedin": "alex-morgan-tech",
+      "website": "alexmorgan.tech"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Maya Peterson",
+    "avatar": "maya-peterson.jpg",
+    "bio": "Environmental scientist and urban planning consultant working on sustainable development projects worldwide.",
+    "social": {
+      "twitter": "mayapeterson_eco",
+      "linkedin": "maya-peterson-env",
+      "website": "mayapeterson.org"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Jordan Chen",
+    "avatar": "jordan-chen.jpg",
+    "bio": "Cultural critic and design enthusiast exploring the intersection of technology, art, and everyday life.",
+    "social": {
+      "twitter": "jordanchenviews",
+      "linkedin": "jordan-chen-culture",
+      "instagram": "jordanchendesign"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Sasha Williams",
+    "avatar": "sasha-williams.jpg",
+    "bio": "Chef, food historian, and culinary educator specializing in global cooking techniques and food anthropology.",
+    "social": {
+      "instagram": "chef_sasha_global",
+      "youtube": "SashaWilliamsCooking",
+      "website": "sashacooks.com"
+    }
+  }
+]

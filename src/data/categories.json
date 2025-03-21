@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Food & Culture",
+    "slug": "food-culture",
+    "description": "Exploring culinary traditions, food history, and the cultural significance of what we eat."
+  },
+  {
+    "id": 2,
+    "name": "Environment",
+    "slug": "environment",
+    "description": "Coverage of environmental issues, conservation efforts, and sustainable living practices."
+  },
+  {
+    "id": 3,
+    "name": "Technology",
+    "slug": "technology",
+    "description": "Analysis and insights on the latest technological developments and their impact on society."
+  },
+  {
+    "id": 4,
+    "name": "Lifestyle",
+    "slug": "lifestyle",
+    "description": "Articles on hobbies, personal development, wellness, and quality of life."
+  },
+  {
+    "id": 5,
+    "name": "Arts",
+    "slug": "arts",
+    "description": "Coverage of visual arts, music, literature, and creative expression in all forms."
+  }
+]
