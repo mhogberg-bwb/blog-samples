@@ -51,7 +51,7 @@ const ClassicFeaturedArticle = ({ article }) => {
           )}
         </div>
         
-        <a href="#" className="featured-read-more">
+        <a href="#article" onClick={(e) => e.preventDefault()} className="featured-read-more">
           Read Full Article
         </a>
       </div>

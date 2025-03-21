@@ -20,16 +20,16 @@ const ClassicFooter = () => {
           <div className="footer-section footer-connect">
             <h4 className="footer-heading">Connect With Us</h4>
             <div className="footer-social">
-              <a href="#" className="footer-social-link" aria-label="Facebook">
+              <a href="https://facebook.com" className="footer-social-link" aria-label="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" className="footer-social-link" aria-label="Twitter">
+              <a href="https://twitter.com" className="footer-social-link" aria-label="Twitter">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" className="footer-social-link" aria-label="Instagram">
+              <a href="https://instagram.com" className="footer-social-link" aria-label="Instagram">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="footer-social-link" aria-label="LinkedIn">
+              <a href="https://linkedin.com" className="footer-social-link" aria-label="LinkedIn">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -45,9 +45,9 @@ const ClassicFooter = () => {
             &copy; {currentYear} The Daily Chronicle. All rights reserved.
           </div>
           <div className="footer-links">
-            <a href="#" className="footer-bottom-link">Privacy Policy</a>
-            <a href="#" className="footer-bottom-link">Terms of Service</a>
-            <a href="#" className="footer-bottom-link">Cookie Policy</a>
+            <a href="/privacy" className="footer-bottom-link">Privacy Policy</a>
+            <a href="/terms" className="footer-bottom-link">Terms of Service</a>
+            <a href="/cookies" className="footer-bottom-link">Cookie Policy</a>
           </div>
         </div>
       </div>
