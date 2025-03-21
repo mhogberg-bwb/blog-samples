@@ -1,18 +1,18 @@
 import React from 'react';
 
-const ClassicSidebar = ({ categories, articles }) => {
+const ClassicSidebar = ({ tags, articles }) => {
   // Get popular articles (for this demo, just using the first 3)
   const popularArticles = articles.slice(0, 3);
   
   return (
     <aside className="cn-sidebar">
-      <div className="cn-sidebar-section cn-sidebar-categories">
-        <h3 className="cn-sidebar-heading">Categories</h3>
-        <ul className="cn-sidebar-category-list">
-          {categories.map(category => (
-            <li key={category.id} className="cn-sidebar-category-item">
-              <a href={`#${category.slug}`} className="cn-sidebar-category-link">
-                {category.name}
+      <div className="cn-sidebar-section cn-sidebar-tags">
+        <h3 className="cn-sidebar-heading">Tags</h3>
+        <ul className="cn-sidebar-tag-list">
+          {tags.map(tag => (
+            <li key={tag.id} className="cn-sidebar-tag-item">
+              <a href={`#${tag.slug}`} className="cn-sidebar-tag-link">
+                {tag.name}
               </a>
             </li>
           ))}
@@ -30,7 +30,14 @@ const ClassicSidebar = ({ categories, articles }) => {
                   alt={article.title}
                   className="cn-sidebar-popular-image"
                   onError={(e) => {
-                    e.target.src = '/images/articles/default-article.jpg';
+                    // Assign image based on article content
+                    if (article.title.includes('Sustainable')) {
+                      e.target.src = 'https://images.pexels.com/photos/5191371/pexels-photo-5191371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+                    } else if (article.title.includes('Analog') || article.title.includes('Renaissance')) {
+                      e.target.src = 'https://images.pexels.com/photos/4065891/pexels-photo-4065891.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+                    } else {
+                      e.target.src = 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+                    }
                   }}
                 />
               </div>
@@ -46,23 +53,6 @@ const ClassicSidebar = ({ categories, articles }) => {
             </div>
           ))}
         </div>
-      </div>
-      
-      <div className="cn-sidebar-section cn-sidebar-newsletter">
-        <h3 className="cn-sidebar-heading">Subscribe to Our Newsletter</h3>
-        <form className="cn-sidebar-newsletter-form">
-          <p className="cn-sidebar-newsletter-desc">
-            Get the latest news and updates delivered straight to your inbox.
-          </p>
-          <input 
-            type="email" 
-            placeholder="Your email address"
-            className="cn-sidebar-newsletter-input"
-          />
-          <button type="submit" className="cn-sidebar-newsletter-button">
-            Subscribe
-          </button>
-        </form>
       </div>
     </aside>
   );

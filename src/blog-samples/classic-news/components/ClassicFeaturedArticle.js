@@ -28,7 +28,7 @@ const ClassicFeaturedArticle = ({ article }) => {
           alt={title}
           className="cn-featured-image"
           onError={(e) => {
-            e.target.src = '/images/articles/default-article.jpg';
+            e.target.src = 'https://images.pexels.com/photos/8386437/pexels-photo-8386437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
           }}
         />
         

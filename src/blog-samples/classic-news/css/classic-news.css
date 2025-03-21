@@ -57,40 +57,12 @@ button {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
-}
-
-.cn-topbar {
-  background-color: #4175ac;
-  color: #fff;
-  padding: 8px 0;
-}
-
-.cn-topbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.cn-topbar-link {
-  color: #fff !important;
-  margin-left: 15px;
-  font-size: 0.9rem;
-}
-
-.cn-topbar-link:hover {
-  text-decoration: underline;
-}
-
-.cn-main-header {
   padding: 15px 0;
 }
 
 .cn-main-header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -102,117 +74,6 @@ button {
   font-size: 1.8rem;
   color: #333;
   font-weight: 700;
-}
-
-.cn-search-container {
-  flex: 1;
-  max-width: 400px;
-  margin: 0 20px;
-}
-
-.cn-search-form {
-  display: flex;
-}
-
-.cn-search-input {
-  flex: 1;
-  padding: 8px 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
-  font-size: 0.9rem;
-}
-
-.cn-search-button {
-  padding: 8px 15px;
-  background-color: #4175ac;
-  color: #fff;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  font-size: 0.9rem;
-}
-
-.cn-mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: 1px solid #4175ac;
-  color: #4175ac;
-  padding: 8px 12px;
-  font-size: 0.9rem;
-  border-radius: 4px;
-}
-
-.cn-navigation {
-  background-color: #333;
-  padding: 10px 0;
-}
-
-.cn-navigation-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.cn-nav-items {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  justify-content: flex-start;
-}
-
-.cn-nav-item {
-  margin-right: 20px;
-}
-
-.cn-nav-link {
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 5px 0;
-  position: relative;
-}
-
-.cn-nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #2199e8;
-  transition: width 0.3s ease;
-}
-
-.cn-nav-link:hover::after,
-.cn-nav-link-active::after {
-  width: 100%;
-}
-
-/* Hero Section */
-.cn-hero {
-  background-color: #dbebfd;
-  padding: 60px 0;
-}
-
-.cn-hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-  text-align: center;
-}
-
-.cn-hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
-  margin: 0 0 15px;
-}
-
-.cn-hero-subtitle {
-  font-size: 1.1rem;
-  color: #5f5f5f;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 /* Main Content Area */
@@ -430,26 +291,32 @@ button {
   border-bottom: 2px solid #dbebfd;
 }
 
-.cn-sidebar-category-list {
+.cn-sidebar-tag-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.cn-sidebar-category-item {
-  margin-bottom: 10px;
+.cn-sidebar-tag-item {
+  margin-bottom: 5px;
 }
 
-.cn-sidebar-category-link {
-  display: block;
-  padding: 8px 0;
-  border-bottom: 1px solid #e5e5e5;
-  color: #5f5f5f;
-  transition: color 0.2s ease;
+.cn-sidebar-tag-link {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #e9f3ff;
+  border-radius: 4px;
+  color: #4175ac;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.cn-sidebar-category-link:hover {
-  color: #2199e8;
+.cn-sidebar-tag-link:hover {
+  background-color: #4175ac;
+  color: #fff;
 }
 
 .cn-sidebar-popular-list {
@@ -492,37 +359,6 @@ button {
   color: #696969;
 }
 
-.cn-sidebar-newsletter-desc {
-  font-size: 0.9rem;
-  color: #5f5f5f;
-  margin-bottom: 15px;
-}
-
-.cn-sidebar-newsletter-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 0.9rem;
-}
-
-.cn-sidebar-newsletter-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #2199e8;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
-}
-
-.cn-sidebar-newsletter-button:hover {
-  background-color: #4175ac;
-}
-
 /* Footer */
 .cn-footer {
   background-color: #dbebfd;
@@ -559,17 +395,17 @@ button {
   line-height: 1.6;
 }
 
-.cn-footer-category-list {
+.cn-footer-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.cn-footer-category-item {
+.cn-footer-item {
   margin-bottom: 10px;
 }
 
-.cn-footer-category-link {
+.cn-footer-link {
   color: #4175ac;
   font-size: 0.9rem;
 }
@@ -577,21 +413,8 @@ button {
 .cn-footer-social {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 20px;
-}
-
-.cn-footer-social-link {
-  background-color: #4175ac;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  transition: background-color 0.2s ease;
-}
-
-.cn-footer-social-link:hover {
-  background-color: #2199e8;
 }
 
 .cn-footer-contact {
@@ -627,53 +450,8 @@ button {
 
 /* Media Queries for Mobile */
 @media screen and (max-width: 767px) {
-  .cn-main-header-container {
-    flex-wrap: wrap;
-  }
-  
-  .cn-logo {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  .cn-search-container {
-    flex: 1;
-    max-width: none;
-    margin: 0;
-    order: 3;
-    width: 100%;
-    margin-top: 15px;
-  }
-  
-  .cn-mobile-menu-toggle {
-    display: block;
-    order: 2;
-  }
-  
-  .cn-navigation {
-    display: none;
-  }
-  
-  .cn-navigation-mobile-open {
-    display: block;
-  }
-  
-  .cn-nav-items {
-    flex-direction: column;
-  }
-  
-  .cn-nav-item {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  
-  .cn-hero {
-    padding: 40px 0;
-  }
-  
-  .cn-hero-title {
-    font-size: 1.8rem;
+  .cn-logo h1 {
+    font-size: 1.5rem;
   }
   
   .cn-featured-image-container {
@@ -719,18 +497,8 @@ button {
 
 /* Media Queries for Tablet */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .cn-main-header-container {
-    flex-wrap: wrap;
-  }
-  
-  .cn-logo {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  .cn-search-container {
-    flex: 1;
+  .cn-logo h1 {
+    font-size: 1.6rem;
   }
   
   .cn-featured-image-container {
@@ -748,9 +516,6 @@ button {
 
 /* Media Queries for Desktop */
 @media screen and (min-width: 1200px) {
-  .cn-main-header-container {
-    flex-wrap: nowrap;
-  }
   
   .cn-featured-image-container {
     height: 400px;

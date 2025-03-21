@@ -13,6 +13,7 @@ export const DataProvider = ({ children }) => {
   const [authors, setAuthors] = useState([]);
   const [categories, setCategories] = useState([]);
   const [comments, setComments] = useState([]);
+  const [tags, setTags] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -37,10 +38,23 @@ export const DataProvider = ({ children }) => {
       };
     });
     
+    // Extract unique tags from all articles
+    const allTags = [];
+    processedArticles.forEach(article => {
+      if (article.tags && Array.isArray(article.tags)) {
+        article.tags.forEach(tag => {
+          if (!allTags.find(t => t.name === tag)) {
+            allTags.push({ id: allTags.length + 1, name: tag, slug: tag.toLowerCase().replace(/\s+/g, '-') });
+          }
+        });
+      }
+    });
+    
     setArticles(processedArticles);
     setAuthors(authorsData);
     setCategories(categoriesData);
     setComments(commentsData);
+    setTags(allTags);
     setIsLoading(false);
   }, []);
 
@@ -50,6 +64,7 @@ export const DataProvider = ({ children }) => {
       authors, 
       categories, 
       comments,
+      tags,
       isLoading
     }}>
       {children}

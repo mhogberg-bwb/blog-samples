@@ -1,17 +1,71 @@
-# Blog UI Implementation Plan
+# Blog UI Implementation Plan (Revised)
 
-We have successfully implemented the first blog sample (Classic News) with a responsive design that adapts to mobile, tablet, and desktop views. The CSS is completely decoupled from the React components as requested, with separate CSS files for each media query.
+We have simplified the scope of the blog samples application to focus on core UI patterns, making it easier to maintain and extend across all 12 planned blog UI samples.
 
-## Completed Work
-1. **Project Structure**: Created a well-organized folder structure that allows for easy addition of new blog samples
-2. **Sample Data**: Created JSON files for articles, authors, categories, and comments that will be reused across all samples
-3. **Data Context**: Implemented a context system to provide data to all components
-4. **Shared Components**: Created reusable components like Author and ArticleCard
-5. **Classic News Blog Sample**: 
-   - Implemented a traditional news/magazine layout
-   - Created responsive designs for mobile, tablet, and desktop
-   - Used the provided color palette
-   - Ensured complete separation of CSS from React components
+## Simplified Scope
+
+Based on the revised requirements, we have made the following simplifications:
+
+1. **Removed unnecessary UI elements**:
+   - No top bar with date and sign-in links
+   - No navigation menu with categories
+   - No newsletter subscription component
+   - Removed hero section
+
+2. **Simplified component hierarchy**:
+   - Focused on essential blog layout components
+   - Changed from Categories to Tags for article filtering
+   - Maintained only critical UI patterns that will be shared across samples
+
+## Common Class Naming Convention
+
+All blog samples will follow a consistent class naming pattern to ensure maintainability and clarity:
+
+- Each blog sample will use a unique two-letter prefix (e.g., `cn-` for Classic News)
+- Common UI patterns will maintain the same naming structure, with only the prefix changing between samples
+
+### Example Class Structure
+
+```
+[prefix]-container
+[prefix]-header
+[prefix]-main
+[prefix]-content
+[prefix]-sidebar
+[prefix]-footer
+[prefix]-featured-article
+[prefix]-article-list
+```
+
+## Blog Sample Component Structure
+
+Each blog sample will maintain a consistent component structure:
+
+1. **Header**: Simple header with logo and search functionality
+2. **Main Content**:
+   - Featured Article: Highlighted main article
+   - Article List: Grid or list of remaining articles
+3. **Sidebar**:
+   - Tags: Filter articles by topic
+   - Popular Articles: Showcase trending content
+4. **Footer**: Simple footer with about info and social links
+
+## Mobile Responsiveness
+
+All blog samples will include consistent responsive behavior:
+
+- Mobile: Single column layout with stacked components
+- Tablet: Enhanced layout with appropriate spacing
+- Desktop: Full multi-column layout
+
+## CSS Organization
+
+CSS will be organized consistently across all samples with clear sections for:
+
+- Base styles and reset
+- Layout components (container, main, content areas)
+- UI components (articles, sidebar elements, etc.)
+- Media queries
 
 ## Plan for Additional Blog Samples
 
@@ -83,28 +137,10 @@ Based on the color palette and guidelines provided, here's the plan for implemen
 - Episode listing format
 - Color palette: Blue gradient backgrounds with white text
 
-## Implementation Strategy
+## Next Steps
 
-For each blog sample, we will:
-
-1. Create a new directory in the `blog-samples` folder
-2. Implement the main component and subcomponents
-3. Create separate CSS files for mobile, tablet, and desktop views
-4. Register the new sample in the main App.js selector
-5. Update the index.html to include the new CSS files with appropriate media queries
-
-This modular approach will allow us to:
-- Keep individual component files small and focused
-- Reuse shared components and data across samples
-- Maintain a clean separation between markup and styling
-- Easily add or modify samples without affecting others
-
-## Common Elements Across All Samples
-
-While each sample will have its unique design, certain elements will remain consistent:
-- The underlying data structure
-- Basic accessibility features
-- Responsive design principles
-- Color palette based on the provided CSS
+1. Complete the simplified Classic News sample as a reference implementation
+2. Create template structure for additional blog UI samples 
+3. Implement remaining blog UI samples following the established patterns
 
 By following this implementation plan, we'll create a comprehensive set of blog UI options that showcase different approaches to blog design while maintaining a cohesive system using the specified color palette.

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ClassicFooter = ({ categories }) => {
+const ClassicFooter = () => {
   const currentYear = new Date().getFullYear();
   
   return (
@@ -17,26 +17,21 @@ const ClassicFooter = ({ categories }) => {
             </p>
           </div>
           
-          <div className="cn-footer-section cn-footer-categories">
-            <h4 className="cn-footer-heading">Categories</h4>
-            <ul className="cn-footer-category-list">
-              {categories.map(category => (
-                <li key={category.id} className="cn-footer-category-item">
-                  <a href={`#${category.slug}`} className="cn-footer-category-link">
-                    {category.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
           <div className="cn-footer-section cn-footer-connect">
             <h4 className="cn-footer-heading">Connect With Us</h4>
             <div className="cn-footer-social">
-              <a href="#" className="cn-footer-social-link">Facebook</a>
-              <a href="#" className="cn-footer-social-link">Twitter</a>
-              <a href="#" className="cn-footer-social-link">Instagram</a>
-              <a href="#" className="cn-footer-social-link">LinkedIn</a>
+              <a href="#" className="cn-footer-social-link" aria-label="Facebook">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" className="cn-footer-social-link" aria-label="Twitter">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#" className="cn-footer-social-link" aria-label="Instagram">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="#" className="cn-footer-social-link" aria-label="LinkedIn">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
             </div>
             <div className="cn-footer-contact">
               <p>Email: contact@dailychronicle.com</p>

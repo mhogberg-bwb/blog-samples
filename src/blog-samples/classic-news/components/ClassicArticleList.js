@@ -37,7 +37,14 @@ const ClassicArticleList = ({ articles }) => {
                   alt={title}
                   className="cn-article-image"
                   onError={(e) => {
-                    e.target.src = '/images/articles/default-article.jpg';
+                    // Assign image based on article content
+                    if (title.includes('Sustainable')) {
+                      e.target.src = 'https://images.pexels.com/photos/5273544/pexels-photo-5273544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+                    } else if (title.includes('Analog') || title.includes('Renaissance')) {
+                      e.target.src = 'https://images.pexels.com/photos/6422059/pexels-photo-6422059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+                    } else {
+                      e.target.src = 'https://cdn.pixabay.com/photo/2019/08/06/22/48/artificial-intelligence-4389372_1280.jpg';
+                    }
                   }}
                 />
                 

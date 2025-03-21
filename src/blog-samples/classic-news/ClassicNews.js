@@ -1,7 +1,6 @@
 import React from 'react';
 import { useData } from '../../utils/DataContext';
 import ClassicHeader from './components/ClassicHeader';
-import ClassicHero from './components/ClassicHero';
 import ClassicFeaturedArticle from './components/ClassicFeaturedArticle';
 import ClassicArticleList from './components/ClassicArticleList';
 import ClassicSidebar from './components/ClassicSidebar';
@@ -9,7 +8,7 @@ import ClassicFooter from './components/ClassicFooter';
 import './css/classic-news.css';
 
 const ClassicNews = () => {
-  const { articles, categories, isLoading } = useData();
+  const { articles, tags, isLoading } = useData();
   
   if (isLoading) {
     return <div className="cn-loading">Loading...</div>;
@@ -23,22 +22,20 @@ const ClassicNews = () => {
   
   return (
     <div className="cn-container">
-      <ClassicHeader categories={categories} />
+      <ClassicHeader />
       
       <main className="cn-main">
-        <ClassicHero />
-        
         <div className="cn-content-container">
           <div className="cn-content">
             <ClassicFeaturedArticle article={featuredArticle} />
             <ClassicArticleList articles={remainingArticles} />
           </div>
           
-          <ClassicSidebar categories={categories} articles={articles} />
+          <ClassicSidebar tags={tags} articles={articles} />
         </div>
       </main>
       
-      <ClassicFooter categories={categories} />
+      <ClassicFooter />
     </div>
   );
 };

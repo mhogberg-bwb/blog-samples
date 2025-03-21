@@ -1,4 +1,4 @@
-# Blog Design System Documentation
+# Blog Design System Documentation (Simplified)
 
 ## Color Palette
 
@@ -67,28 +67,22 @@ CSS will be organized in separate files for each breakpoint, following the provi
 
 ## Component Structure
 
-Each blog sample will be composed of reusable components:
+Each blog sample will be composed of these core components:
 
-- Header
-- Navigation
-- Hero/Banner
-- Article Card
+- Header (logo and search)
+- Featured Article
 - Article List
-- Article Full
-- Sidebar
+- Sidebar (tags and popular articles)
 - Footer
-- Search
-- Comments Section
-- Author Bio
-- Social Sharing
+
+All components will use a consistent CSS class naming structure with a unique two-letter prefix for each blog sample.
 
 ## Data Structure
 
 Sample data will be stored in JSON files and reused across all blog samples:
-- Articles
+- Articles (with tags)
 - Authors
-- Categories
+- Categories (for backward compatibility)
 - Comments
-- Media (images, videos)
 
-This approach will allow the executive team to evaluate each design using identical content.
+A unified DataContext provides access to all data, including processed tags extracted from articles.
