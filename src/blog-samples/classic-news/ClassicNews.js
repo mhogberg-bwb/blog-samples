@@ -5,7 +5,8 @@ import ClassicFeaturedArticle from './components/ClassicFeaturedArticle';
 import ClassicArticleList from './components/ClassicArticleList';
 import ClassicSidebar from './components/ClassicSidebar';
 import ClassicFooter from './components/ClassicFooter';
-import './css/classic-news.css';
+import '../../styles/base-styles.css';
+import '../../styles/themes/classic-news.css';
 
 const ClassicNews = () => {
   const { articles, tags, isLoading } = useData();

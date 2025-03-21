@@ -1,0 +1,30 @@
+/* Classic News Theme Variables
+ * This theme uses a traditional newspaper/magazine approach
+ */
+
+:root {
+  /* Color overrides */
+  --color-primary: #4175ac;
+  --color-primary-light: #dbebfd;
+  --color-primary-lighter: #d7ebff;
+  --color-secondary: #2199e8;
+  
+  /* Typography overrides */
+  --font-family-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  /* Layout overrides */
+  --featured-image-height: 400px;
+  --article-image-height: 200px;
+  
+  /* Component-specific overrides */
+  --article-hover-transform: translateY(-5px);
+}
+
+/* Any theme-specific styles that can't be handled by variables alone */
+.article-title {
+  font-family: Georgia, serif;
+}
+
+.featured-title {
+  font-family: Georgia, serif;
+}
