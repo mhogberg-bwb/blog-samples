@@ -103,7 +103,7 @@ body {
 /* Responsive indicators */
 .responsive-indicators {
   position: fixed;
-  top: 16%;
+  top: 22%;
   right: 20px;
   transform: translateY(-50%);
   z-index: 1000;

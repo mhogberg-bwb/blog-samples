@@ -9,6 +9,15 @@ const GridGalleryArticleList = ({ articles }) => {
     );
   }
   
+  // Function to format dates
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+  
   return (
     <section className="article-list">
       <h2 className="article-list-heading grid-gallery-article-list-heading">
@@ -20,12 +29,15 @@ const GridGalleryArticleList = ({ articles }) => {
           <article key={article.id} className="article-item grid-gallery-article-item">
             <div className="article-image-container grid-gallery-article-image-container">
               <img 
-                src={article.image} 
+                src={`/images/articles/${article.image}`} 
                 alt={article.title} 
                 className="article-image"
+                onError={(e) => {
+                  e.target.src = 'https://images.pexels.com/photos/8386437/pexels-photo-8386437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+                }}
               />
               <span className="article-category grid-gallery-article-category">
-                {article.category}
+                {article.category && article.category.name}
               </span>
             </div>
             
@@ -41,10 +53,10 @@ const GridGalleryArticleList = ({ articles }) => {
               <div className="article-meta grid-gallery-article-meta">
                 <div className="article-details">
                   <span className="article-author">
-                    By {article.author}
+                    By {article.author && article.author.name}
                   </span>
                   <span className="article-date">
-                    {article.date}
+                    {formatDate(article.publishDate)}
                   </span>
                 </div>
                 

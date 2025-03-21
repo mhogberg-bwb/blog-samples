@@ -4,6 +4,15 @@ const GridGallerySidebar = ({ tags, articles }) => {
   // Get the top 5 articles for popular posts section
   const popularArticles = articles.slice(0, 5);
   
+  // Function to format dates
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+  
   return (
     <aside className="sidebar grid-gallery-sidebar">
       {/* Tags Section */}
@@ -34,9 +43,12 @@ const GridGallerySidebar = ({ tags, articles }) => {
             <div key={article.id} className="sidebar-popular-item grid-gallery-sidebar-popular-item">
               <div className="sidebar-popular-image-container">
                 <img 
-                  src={article.image} 
+                  src={`/images/articles/${article.image}`} 
                   alt={article.title}
                   className="sidebar-popular-image grid-gallery-sidebar-popular-image"
+                  onError={(e) => {
+                    e.target.src = 'https://images.pexels.com/photos/8386437/pexels-photo-8386437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+                  }}
                 />
               </div>
               
@@ -46,7 +58,7 @@ const GridGallerySidebar = ({ tags, articles }) => {
                 </h4>
                 
                 <span className="sidebar-popular-date grid-gallery-sidebar-popular-date">
-                  {article.date}
+                  {formatDate(article.publishDate)}
                 </span>
               </div>
             </div>
