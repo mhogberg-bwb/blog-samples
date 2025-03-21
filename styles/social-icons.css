@@ -1,0 +1,73 @@
+/* Social Media Icons */
+.cn-footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.cn-footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4175ac;
+  color: #fff !important;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cn-footer-social-link:hover {
+  background-color: #2199e8;
+  transform: translateY(-3px);
+}
+
+/* Icon specific styles */
+.fa-facebook-f {
+  font-size: 1.2rem;
+}
+
+.fa-twitter {
+  font-size: 1.2rem;
+}
+
+.fa-instagram {
+  font-size: 1.3rem;
+}
+
+.fa-linkedin-in {
+  font-size: 1.2rem;
+}
+
+/* Color variations on hover */
+.cn-footer-social-link:hover .fa-facebook-f {
+  color: #fff;
+}
+
+.cn-footer-social-link:hover .fa-twitter {
+  color: #fff;
+}
+
+.cn-footer-social-link:hover .fa-instagram {
+  color: #fff;
+}
+
+.cn-footer-social-link:hover .fa-linkedin-in {
+  color: #fff;
+}
+
+/* Animation for icon on hover */
+.cn-footer-social-link i {
+  transition: transform 0.2s ease;
+}
+
+.cn-footer-social-link:hover i {
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .cn-footer-social {
+    justify-content: center;
+  }
+}
