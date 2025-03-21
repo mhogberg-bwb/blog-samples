@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DataProvider } from './utils/DataContext';
 import ClassicNews from './blog-samples/classic-news/ClassicNews';
 import Minimalist from './blog-samples/minimalist/Minimalist';
+import CardBased from './blog-samples/card-based/CardBased';
 import './styles/App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
   const blogSamples = [
     { id: 'classic-news', name: 'Classic News', component: ClassicNews },
     { id: 'minimalist', name: 'Minimalist', component: Minimalist },
+    { id: 'card-based', name: 'Card-Based', component: CardBased },
     // More samples will be added later
   ];
   
@@ -25,8 +27,6 @@ function App() {
       <div className="app-container">
         <header className="app-header">
           <h1>Blog UI Options</h1>
-          <p>Explore different blog interface designs</p>
-          
           <div className="sample-selector">
             <label htmlFor="sample-select">Select a blog sample:</label>
             <select 
