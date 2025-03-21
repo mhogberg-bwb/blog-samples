@@ -103,7 +103,7 @@ body {
 /* Responsive indicators */
 .responsive-indicators {
   position: fixed;
-  top: 50%;
+  top: 16%;
   right: 20px;
   transform: translateY(-50%);
   z-index: 1000;
@@ -113,13 +113,15 @@ body {
 }
 
 .responsive-indicator {
+  width: 80px;
+  text-align: center;
   padding: 8px 12px;
   border-radius: 4px;
   font-size: 0.8rem;
   font-weight: 600;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  opacity: 0.3;
-  transition: opacity 0.3s ease;
+  opacity: 0.1;
+  transition: opacity 0.1s ease;
 }
 
 .responsive-indicator.mobile {

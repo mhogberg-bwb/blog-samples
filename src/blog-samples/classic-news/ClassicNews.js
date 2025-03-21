@@ -23,9 +23,12 @@ const ClassicNews = () => {
   
   return (
     <div className="container">
+      
       <ClassicHeader />
       
       <main className="main">
+      <link rel="stylesheet" type="text/css" href="styles/themes/classic-news.css" />
+      <link rel="stylesheet" type="text/css" href="styles/base-styles.css" />
         <div className="content-container">
           <div className="content">
             <ClassicFeaturedArticle article={featuredArticle} />

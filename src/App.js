@@ -3,6 +3,7 @@ import { DataProvider } from './utils/DataContext';
 import ClassicNews from './blog-samples/classic-news/ClassicNews';
 import Minimalist from './blog-samples/minimalist/Minimalist';
 import CardBased from './blog-samples/card-based/CardBased';
+//import GridGallery from './blog-samples/grid-gallery/GridGallery';
 import './styles/App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     { id: 'classic-news', name: 'Classic News', component: ClassicNews },
     { id: 'minimalist', name: 'Minimalist', component: Minimalist },
     { id: 'card-based', name: 'Card-Based', component: CardBased },
+    // { id: 'grid-gallery', name: 'Grid Gallery', component: GridGallery },
     // More samples will be added later
   ];
   
