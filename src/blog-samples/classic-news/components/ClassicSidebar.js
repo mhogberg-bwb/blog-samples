@@ -5,13 +5,13 @@ const ClassicSidebar = ({ tags, articles }) => {
   const popularArticles = articles.slice(0, 3);
   
   return (
-    <aside className="cn-sidebar">
-      <div className="cn-sidebar-section cn-sidebar-tags">
-        <h3 className="cn-sidebar-heading">Tags</h3>
-        <ul className="cn-sidebar-tag-list">
+    <aside className="sidebar">
+      <div className="sidebar-section sidebar-tags">
+        <h3 className="sidebar-heading">Tags</h3>
+        <ul className="sidebar-tag-list">
           {tags.map(tag => (
-            <li key={tag.id} className="cn-sidebar-tag-item">
-              <a href={`#${tag.slug}`} className="cn-sidebar-tag-link">
+            <li key={tag.id} className="sidebar-tag-item">
+              <a href={`#${tag.slug}`} className="sidebar-tag-link">
                 {tag.name}
               </a>
             </li>
@@ -19,16 +19,16 @@ const ClassicSidebar = ({ tags, articles }) => {
         </ul>
       </div>
       
-      <div className="cn-sidebar-section cn-sidebar-popular">
-        <h3 className="cn-sidebar-heading">Popular Articles</h3>
-        <div className="cn-sidebar-popular-list">
+      <div className="sidebar-section sidebar-popular">
+        <h3 className="sidebar-heading">Popular Articles</h3>
+        <div className="sidebar-popular-list">
           {popularArticles.map(article => (
-            <div key={article.id} className="cn-sidebar-popular-item">
-              <div className="cn-sidebar-popular-image-container">
+            <div key={article.id} className="sidebar-popular-item">
+              <div className="sidebar-popular-image-container">
                 <img 
                   src={`/images/articles/${article.image}`} 
                   alt={article.title}
-                  className="cn-sidebar-popular-image"
+                  className="sidebar-popular-image"
                   onError={(e) => {
                     // Assign image based on article content
                     if (article.title.includes('Sustainable')) {
@@ -41,9 +41,9 @@ const ClassicSidebar = ({ tags, articles }) => {
                   }}
                 />
               </div>
-              <div className="cn-sidebar-popular-content">
-                <h4 className="cn-sidebar-popular-title">{article.title}</h4>
-                <span className="cn-sidebar-popular-date">
+              <div className="sidebar-popular-content">
+                <h4 className="sidebar-popular-title">{article.title}</h4>
+                <span className="sidebar-popular-date">
                   {new Date(article.publishDate).toLocaleDateString('en-US', {
                     month: 'short',
                     day: 'numeric'

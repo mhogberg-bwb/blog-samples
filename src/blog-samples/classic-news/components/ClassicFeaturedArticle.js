@@ -21,37 +21,37 @@ const ClassicFeaturedArticle = ({ article }) => {
   });
   
   return (
-    <div className="cn-featured-article">
-      <div className="cn-featured-image-container">
+    <div className="featured-article">
+      <div className="featured-image-container">
         <img 
           src={`/images/articles/${image}`} 
           alt={title}
-          className="cn-featured-image"
+          className="featured-image"
           onError={(e) => {
             e.target.src = 'https://images.pexels.com/photos/8386437/pexels-photo-8386437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
           }}
         />
         
         {category && (
-          <span className="cn-featured-category">{category.name}</span>
+          <span className="featured-category">{category.name}</span>
         )}
       </div>
       
-      <div className="cn-featured-content">
-        <h2 className="cn-featured-title">{title}</h2>
-        <p className="cn-featured-excerpt">{excerpt}</p>
+      <div className="featured-content">
+        <h2 className="featured-title">{title}</h2>
+        <p className="featured-excerpt">{excerpt}</p>
         
-        <div className="cn-featured-meta">
+        <div className="featured-meta">
           {author && (
-            <span className="cn-featured-author">By {author.name}</span>
+            <span className="featured-author">By {author.name}</span>
           )}
-          <span className="cn-featured-date">{formattedDate}</span>
+          <span className="featured-date">{formattedDate}</span>
           {readTime && (
-            <span className="cn-featured-readtime">{readTime} min read</span>
+            <span className="featured-readtime">{readTime} min read</span>
           )}
         </div>
         
-        <a href="#" className="cn-featured-read-more">
+        <a href="#" className="featured-read-more">
           Read Full Article
         </a>
       </div>

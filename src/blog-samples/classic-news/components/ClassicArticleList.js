@@ -2,14 +2,14 @@ import React from 'react';
 
 const ClassicArticleList = ({ articles }) => {
   if (!articles || articles.length === 0) {
-    return <div className="cn-no-articles">No articles to display</div>;
+    return <div className="no-articles">No articles to display</div>;
   }
   
   return (
-    <div className="cn-article-list">
-      <h3 className="cn-article-list-heading">Latest Articles</h3>
+    <div className="article-list">
+      <h3 className="article-list-heading">Latest Articles</h3>
       
-      <div className="cn-article-grid">
+      <div className="article-grid">
         {articles.map(article => {
           const { 
             id, 
@@ -30,12 +30,12 @@ const ClassicArticleList = ({ articles }) => {
           });
           
           return (
-            <article key={id} className="cn-article-item">
-              <div className="cn-article-image-container">
+            <article key={id} className="article-item">
+              <div className="article-image-container">
                 <img 
                   src={`/images/articles/${image}`} 
                   alt={title}
-                  className="cn-article-image"
+                  className="article-image"
                   onError={(e) => {
                     // Assign image based on article content
                     if (title.includes('Sustainable')) {
@@ -49,22 +49,22 @@ const ClassicArticleList = ({ articles }) => {
                 />
                 
                 {category && (
-                  <span className="cn-article-category">{category.name}</span>
+                  <span className="article-category">{category.name}</span>
                 )}
               </div>
               
-              <div className="cn-article-content">
-                <h3 className="cn-article-title">{title}</h3>
-                <p className="cn-article-excerpt">{excerpt}</p>
+              <div className="article-content">
+                <h3 className="article-title">{title}</h3>
+                <p className="article-excerpt">{excerpt}</p>
                 
-                <div className="cn-article-meta">
+                <div className="article-meta">
                   {author && (
-                    <span className="cn-article-author">By {author.name}</span>
+                    <span className="article-author">By {author.name}</span>
                   )}
-                  <div className="cn-article-details">
-                    <span className="cn-article-date">{formattedDate}</span>
+                  <div className="article-details">
+                    <span className="article-date">{formattedDate}</span>
                     {readTime && (
-                      <span className="cn-article-readtime">{readTime} min read</span>
+                      <span className="article-readtime">{readTime} min read</span>
                     )}
                   </div>
                 </div>

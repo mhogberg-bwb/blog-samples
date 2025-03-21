@@ -11,7 +11,7 @@ const ClassicNews = () => {
   const { articles, tags, isLoading } = useData();
   
   if (isLoading) {
-    return <div className="cn-loading">Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
   
   // Get featured article (first article)
@@ -21,12 +21,12 @@ const ClassicNews = () => {
   const remainingArticles = articles.slice(1);
   
   return (
-    <div className="cn-container">
+    <div className="container">
       <ClassicHeader />
       
-      <main className="cn-main">
-        <div className="cn-content-container">
-          <div className="cn-content">
+      <main className="main">
+        <div className="content-container">
+          <div className="content">
             <ClassicFeaturedArticle article={featuredArticle} />
             <ClassicArticleList articles={remainingArticles} />
           </div>
