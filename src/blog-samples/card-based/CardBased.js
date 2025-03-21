@@ -5,8 +5,7 @@ import CardBasedFeaturedArticle from './components/CardBasedFeaturedArticle';
 import CardBasedArticleList from './components/CardBasedArticleList';
 import CardBasedSidebar from './components/CardBasedSidebar';
 import CardBasedFooter from './components/CardBasedFooter';
-import '../../styles/base-styles.css';
-import '../../styles/themes/card-based.css';
+// CSS is now loaded via App.js
 
 const CardBased = () => {
   const { articles, tags, isLoading } = useData();

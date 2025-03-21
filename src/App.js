@@ -1,19 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DataProvider } from './utils/DataContext';
 import ClassicNews from './blog-samples/classic-news/ClassicNews';
 import Minimalist from './blog-samples/minimalist/Minimalist';
 import CardBased from './blog-samples/card-based/CardBased';
-//import GridGallery from './blog-samples/grid-gallery/GridGallery';
+import GridGallery from './blog-samples/grid-gallery/GridGallery';
 import './styles/App.css';
+import './styles/base-styles.css';
 
 function App() {
   const [activeSample, setActiveSample] = useState('classic-news');
+  
+  // Dynamic CSS loading based on active sample
+  useEffect(() => {
+    // Import CSS based on active sample
+    const loadThemeCSS = async () => {
+      switch(activeSample) {
+        case 'classic-news':
+          await import('./styles/themes/classic-news.css');
+          break;
+        case 'minimalist':
+          await import('./styles/themes/minimalist.css');
+          break;
+        case 'card-based':
+          await import('./styles/themes/card-based.css');
+          break;
+        case 'grid-gallery':
+          await import('./styles/themes/grid-gallery.css');
+          break;
+        default:
+          await import('./styles/themes/classic-news.css');
+      }
+    };
+    
+    loadThemeCSS();
+    
+    // Cleanup previous CSS when component changes
+    return () => {
+      // CSS modules are handled by webpack and can't be manually removed
+      // But the new CSS will override the old one
+    };
+  }, [activeSample]);
   
   const blogSamples = [
     { id: 'classic-news', name: 'Classic News', component: ClassicNews },
     { id: 'minimalist', name: 'Minimalist', component: Minimalist },
     { id: 'card-based', name: 'Card-Based', component: CardBased },
-    // { id: 'grid-gallery', name: 'Grid Gallery', component: GridGallery },
+    { id: 'grid-gallery', name: 'Grid Gallery', component: GridGallery },
     // More samples will be added later
   ];
   

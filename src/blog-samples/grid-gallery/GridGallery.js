@@ -1,12 +1,10 @@
 import React from 'react';
 import { useData } from '../../utils/DataContext';
 import GridGalleryHeader from './components/GridGalleryHeader';
-//import GridGalleryFeaturedArticle from './components/GridGalleryFeaturedArticle';
-//import GridGalleryArticleList from './components/GridGalleryArticleList';
+import GridGalleryFeaturedArticle from './components/GridGalleryFeaturedArticle';
+import GridGalleryArticleList from './components/GridGalleryArticleList';
 import GridGallerySidebar from './components/GridGallerySidebar';
 import GridGalleryFooter from './components/GridGalleryFooter';
-// import '../../styles/base-styles.css';
-// import '../../styles/themes/grid-gallery.css';
 
 const GridGallery = () => {
   const { articles, tags, isLoading } = useData();
@@ -28,8 +26,8 @@ const GridGallery = () => {
       <main className="main">
         <div className="content-container">
           <div className="content">
-            {/* <GridGalleryFeaturedArticle article={featuredArticle} /> */}
-            {/* <GridGalleryArticleList articles={remainingArticles} /> */}
+            <GridGalleryFeaturedArticle article={featuredArticle} />
+            <GridGalleryArticleList articles={remainingArticles} />
           </div>
           
           <GridGallerySidebar tags={tags} articles={articles} />

@@ -5,8 +5,7 @@ import MinimalistFeaturedArticle from './components/MinimalistFeaturedArticle';
 import MinimalistArticleList from './components/MinimalistArticleList';
 import MinimalistSidebar from './components/MinimalistSidebar';
 import MinimalistFooter from './components/MinimalistFooter';
-import '../../styles/base-styles.css';
-import '../../styles/themes/minimalist.css';
+// CSS is now loaded via App.js
 
 const Minimalist = () => {
   const { articles, tags, isLoading } = useData();

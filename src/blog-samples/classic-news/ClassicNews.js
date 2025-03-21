@@ -5,8 +5,7 @@ import ClassicFeaturedArticle from './components/ClassicFeaturedArticle';
 import ClassicArticleList from './components/ClassicArticleList';
 import ClassicSidebar from './components/ClassicSidebar';
 import ClassicFooter from './components/ClassicFooter';
-import '../../styles/base-styles.css';
-import '../../styles/themes/classic-news.css';
+// CSS is now loaded via App.js
 
 const ClassicNews = () => {
   const { articles, tags, isLoading } = useData();
@@ -27,8 +26,7 @@ const ClassicNews = () => {
       <ClassicHeader />
       
       <main className="main">
-      <link rel="stylesheet" type="text/css" href="styles/themes/classic-news.css" />
-      <link rel="stylesheet" type="text/css" href="styles/base-styles.css" />
+
         <div className="content-container">
           <div className="content">
             <ClassicFeaturedArticle article={featuredArticle} />
