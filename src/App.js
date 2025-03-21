@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DataProvider } from './utils/DataContext';
 import ClassicNews from './blog-samples/classic-news/ClassicNews';
+import Minimalist from './blog-samples/minimalist/Minimalist';
 import './styles/App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   
   const blogSamples = [
     { id: 'classic-news', name: 'Classic News', component: ClassicNews },
+    { id: 'minimalist', name: 'Minimalist', component: Minimalist },
     // More samples will be added later
   ];
   

@@ -12,10 +12,17 @@
   
   /* Typography overrides */
   --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-size-heading-1: 2.5rem;
+  --font-size-heading-2: 2rem;
+  --font-size-heading-3: 1.5rem;
+  --font-size-heading-4: 1.2rem;
+  --line-height-heading: 1.3;
+  --line-height-paragraph: 1.7;
   
   /* Layout overrides */
   --featured-image-height: 350px;
   --article-image-height: 180px;
+  --container-width: 1100px;
   
   /* Borders & Radius */
   --border-radius-sm: 0;
@@ -33,28 +40,313 @@
 /* Import font for this theme */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Any theme-specific styles that can't be handled by variables alone */
-.article-item {
-  border-bottom: 1px solid var(--color-primary-light);
+/* Container modifications */
+.minimalist-container {
+  background-color: var(--color-white);
 }
 
-.article-item:hover {
+/* Header styles */
+.minimalist-header {
+  border-bottom: 1px solid var(--color-primary-light);
+  box-shadow: none;
+  padding: var(--spacing-md) 0;
+}
+
+.minimalist-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.minimalist-header .logo h1 {
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+/* Featured article */
+.minimalist-featured-article {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.minimalist-featured-image-container {
+  border-radius: 0;
+}
+
+.minimalist-featured-category {
+  background-color: var(--color-primary);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  border-radius: 0;
+  font-weight: 500;
+}
+
+.minimalist-featured-content {
+  padding: var(--spacing-lg) 0;
+}
+
+.minimalist-featured-meta {
+  order: 1;
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+}
+
+.minimalist-featured-title {
+  order: 2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--spacing-md);
+}
+
+.minimalist-featured-excerpt {
+  order: 3;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: var(--line-height-paragraph);
+}
+
+.minimalist-featured-read-more {
+  order: 4;
+  background-color: transparent;
+  color: var(--color-primary);
+  padding: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--color-primary);
+  transition: border-color 0.3s ease;
+  margin-top: var(--spacing-md);
+  display: inline-block;
+}
+
+.minimalist-featured-read-more:hover {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  background-color: transparent;
+}
+
+/* Article list */
+.minimalist-article-list-heading {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: var(--color-text-medium);
+  border-bottom: 1px solid var(--color-primary-light);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+}
+
+.minimalist-article-grid {
+  row-gap: var(--spacing-xl);
+}
+
+.minimalist-article-item {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-primary-light);
+  border-radius: 0;
+  padding-bottom: var(--spacing-md);
+  transition: transform 0.3s ease;
+}
+
+.minimalist-article-item:hover {
   transform: var(--article-hover-transform);
   box-shadow: var(--shadow-lg);
 }
 
-.featured-article {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+.minimalist-article-image-container {
+  margin-bottom: var(--spacing-sm);
 }
 
-.sidebar-section {
+.minimalist-article-category {
+  background-color: var(--color-primary);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  border-radius: 0;
+  font-weight: 500;
+}
+
+.minimalist-article-content {
+  padding: var(--spacing-sm) 0 0;
+}
+
+.minimalist-article-title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.minimalist-article-excerpt {
+  font-size: 0.95rem;
+  line-height: var(--line-height-paragraph);
+  color: var(--color-text);
+}
+
+.minimalist-article-meta {
+  color: var(--color-secondary);
+  font-size: 0.8rem;
+  margin-top: var(--spacing-sm);
+}
+
+/* Sidebar */
+.minimalist-sidebar {
+  margin-top: var(--spacing-lg);
+}
+
+.minimalist-sidebar-section {
+  background-color: transparent;
   border: 1px solid var(--color-primary-light);
-  box-shadow: none;
+  border-radius: 0;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
 }
 
-.footer {
+.minimalist-sidebar-heading {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: var(--color-text-medium);
+  border-bottom: 1px solid var(--color-primary-light);
+}
+
+.minimalist-sidebar-tag-list {
+  margin-top: var(--spacing-md);
+}
+
+.minimalist-sidebar-tag-link {
+  background-color: transparent;
+  border: 1px solid var(--color-primary-light);
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.minimalist-sidebar-tag-link:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.minimalist-sidebar-popular-item {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-primary-light);
+}
+
+.minimalist-sidebar-popular-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.minimalist-sidebar-popular-image {
+  border-radius: 0;
+}
+
+.minimalist-sidebar-popular-title {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.minimalist-sidebar-popular-date {
+  font-size: 0.75rem;
+  color: var(--color-secondary);
+}
+
+/* Footer */
+.minimalist-footer {
   background-color: var(--color-white);
   border-top: 1px solid var(--color-primary-light);
+  padding-top: var(--spacing-xl);
+}
+
+.minimalist-footer-heading {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.minimalist-footer-text {
+  line-height: var(--line-height-paragraph);
+}
+
+.minimalist-footer-social-link {
+  color: var(--color-primary);
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.minimalist-footer-social-link:hover {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.minimalist-footer-bottom {
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-primary-light);
+  font-size: 0.8rem;
+}
+
+.minimalist-footer-copyright {
+  color: var(--color-secondary);
+}
+
+.minimalist-footer-bottom-link {
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.minimalist-footer-bottom-link:hover {
+  color: var(--color-primary);
+}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+  .minimalist-featured-article {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .minimalist-article-grid {
+    gap: var(--spacing-lg);
+  }
+  
+  .minimalist-footer-content {
+    gap: var(--spacing-xl);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .minimalist-featured-article {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .minimalist-article-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .minimalist-featured-article {
+    margin-bottom: var(--spacing-xxl);
+  }
+  
+  .minimalist-article-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+  }
 }
