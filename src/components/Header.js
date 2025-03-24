@@ -9,7 +9,7 @@ const Header = ({ title, subtitle, categories = [] }) => {
           {subtitle && <p className="blog-subtitle">{subtitle}</p>}
         </div>
         
-        {categories.length > 0 && (
+        {/* {categories.length > 0 && (
           <nav className="blog-categories">
             <ul className="blog-category-list">
               {categories.map((category) => (
@@ -30,7 +30,7 @@ const Header = ({ title, subtitle, categories = [] }) => {
               <span className="search-icon">🔍</span>
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </header>
   );
