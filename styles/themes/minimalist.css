@@ -300,21 +300,29 @@
   line-height: var(--line-height-paragraph);
 }
 
-.blog-footer-social a {
+/* Social links for minimalist theme */
+.blog-footer-social-link {
   color: var(--color-primary);
   width: 36px;
   height: 36px;
   border: 1px solid var(--color-primary-light);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  border-radius: 0;
 }
 
-.blog-footer-social a:hover {
+.blog-footer-social-link:hover {
   background-color: var(--color-primary);
   color: white;
   border-color: var(--color-primary);
+}
+
+.blog-footer-social-link svg {
+  width: 18px;
+  height: 18px;
 }
 
 .blog-footer-bottom {
