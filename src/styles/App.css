@@ -1,3 +1,6 @@
+/* Import Montserrat font used in Grid Gallery */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
 /* App container */
 .app-container {
   display: flex;
@@ -7,31 +10,48 @@
 
 /* App header */
 .app-header {
-  background-color: #4175ac;
+  background-color: rgba(65, 117, 172, 0.85); /* Semi-transparent blue */
   color: white;
-  padding: 1rem;
+  padding: 0.5rem 1rem; /* Reduced padding for more compact header */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed; /* Fixed position */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays above other content */
+  backdrop-filter: blur(5px); /* Adds a slight blur effect to content underneath */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 .app-header h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem; /* Smaller font size */
+  font-weight: 700; /* Match Grid Gallery's font weight */
+  text-transform: uppercase; /* Match Grid Gallery's text transformation */
+  letter-spacing: 1px; /* Match Grid Gallery's letter spacing */
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 .theme-selector {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 .theme-selector label {
   margin-right: 0.5rem;
+  font-size: 0.9rem; /* Smaller font size */
+  font-weight: 500;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 .theme-selector select {
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem; /* Smaller padding */
   border-radius: 4px;
   border: 1px solid #ddd;
   background-color: white;
@@ -39,6 +59,13 @@
   font-size: 0.9rem;
   cursor: pointer;
   min-width: 150px;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Add padding to main content to account for fixed header */
+.app-main {
+  padding-top: 3.5rem; /* Adjust based on the header height */
+  flex: 1;
 }
 
 /* Fix for dropdown z-index and pointer events */
@@ -48,6 +75,7 @@
   cursor: pointer !important;
   pointer-events: auto !important;
   opacity: 1 !important;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 /* Responsive indicators */
@@ -59,7 +87,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .responsive-indicator {
@@ -69,20 +97,21 @@
   font-size: 12px;
   font-weight: bold;
   text-align: center;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .mobile {
-  background-color: #ff6b6b99;
+  background-color: #ff6b6b77;
   display: none;
 }
 
 .tablet {
-  background-color: #5f27cd99;
+  background-color: #5f27cd77;
   display: none;
 }
 
 .desktop {
-  background-color: #20bf6b99;
+  background-color: #20bf6b77;
   display: none;
 }
 
@@ -106,11 +135,6 @@
 }
 
 /* App main */
-.app-main {
-  flex: 1;
-  padding: 1rem;
-}
-
 .sample-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -122,6 +146,7 @@
   color: white;
   padding: 1rem;
   text-align: center;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Override any pointer-event blockers */

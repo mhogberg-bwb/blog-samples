@@ -15,12 +15,12 @@ const ArticleList = ({ articles, title }) => {
           <p className="blog-no-articles">No articles to display</p>
         )}
       </div>
-      
+{/*       
       {articles.length > 0 && (
         <div className="blog-load-more">
           <button className="blog-load-more-button">Load More</button>
         </div>
-      )}
+      )} */}
     </section>
   );
 };
