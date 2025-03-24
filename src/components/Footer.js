@@ -49,7 +49,7 @@ const Footer = ({ categories = [], socialLinks = [] }) => {
                     className={`blog-footer-social-link ${link.platform.toLowerCase()}`}
                     aria-label={link.platform}
                   >
-                    {link.icon || link.platform}
+                    {link.icon}
                   </a>
                 ))}
               </div>

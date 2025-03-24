@@ -438,11 +438,35 @@ button {
   font-size: var(--font-size-small);
 }
 
+/* Social icons */
 .blog-footer-social {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
+}
+
+.blog-footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.blog-footer-social-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Style SVG icons */
+.blog-footer-social-link svg {
+  width: 20px;
+  height: 20px;
 }
 
 .blog-footer-contact {
