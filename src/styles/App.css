@@ -72,17 +72,17 @@
 }
 
 .mobile {
-  background-color: #ff6b6b;
+  background-color: #ff6b6b99;
   display: none;
 }
 
 .tablet {
-  background-color: #5f27cd;
+  background-color: #5f27cd99;
   display: none;
 }
 
 .desktop {
-  background-color: #20bf6b;
+  background-color: #20bf6b99;
   display: none;
 }
 

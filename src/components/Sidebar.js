@@ -67,8 +67,8 @@ const Sidebar = ({ categories, popularPosts, tags }) => {
           </div>
         </div>
       )}
-      
-      {/* Newsletter Subscribe Section */}
+{/*       
+      {/* Newsletter Subscribe Section 
       <div className="blog-sidebar-section">
         <h3 className="blog-sidebar-heading">Subscribe</h3>
         <form className="blog-sidebar-form">
@@ -78,7 +78,7 @@ const Sidebar = ({ categories, popularPosts, tags }) => {
           </div>
           <button type="submit" className="blog-sidebar-button">Subscribe</button>
         </form>
-      </div>
+      </div> */}
     </aside>
   );
 };

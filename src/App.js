@@ -6,19 +6,7 @@ import './styles/base-styles.css';
 
 function App() {
   const [activeTheme, setActiveTheme] = useState('classic-news');
-  
-  // // Force load the base-variables.css file first (this only needs to be loaded once)
-  // useEffect(() => {
-  //   // Create a link element for base variables if it doesn't exist
-  //   if (!document.getElementById('base-variables-stylesheet')) {
-  //     const baseVarsLink = document.createElement('link');
-  //     baseVarsLink.id = 'base-variables-stylesheet';
-  //     baseVarsLink.rel = 'stylesheet';
-  //     baseVarsLink.href = '/styles/base-variables.css';
-  //     document.head.appendChild(baseVarsLink);
-  //   }
-  // }, []);
-  
+    
   // Load theme CSS when activeTheme changes
   useEffect(() => {
     // Update the body class for additional theme styling
@@ -109,7 +97,6 @@ function App() {
           </div>
           
           <div className="sample-container">
-            {/* Use the unified BlogLayout component for all themes */}
             <BlogLayout theme={activeTheme} />
           </div>
         </main>
