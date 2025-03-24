@@ -1,4 +1,4 @@
-/* Minimalist Theme Variables
+/* Minimalist Theme
  * This theme uses clean, simple design with ample white space
  */
 
@@ -41,30 +41,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* Container modifications */
-.minimalist-container {
+.blog-container {
   background-color: var(--color-white);
 }
 
 /* Header styles */
-.minimalist-header {
+.blog-header {
   border-bottom: 1px solid var(--color-primary-light);
   box-shadow: none;
   padding: var(--spacing-md) 0;
 }
 
-.minimalist-logo {
+.blog-header-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.minimalist-header .logo h1 {
+.blog-logo h1 {
   font-weight: 400;
   letter-spacing: -0.5px;
 }
 
 /* Featured article */
-.minimalist-featured-article {
+.blog-featured-article {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -72,11 +72,11 @@
   background-color: transparent;
 }
 
-.minimalist-featured-image-container {
+.blog-featured-image-container {
   border-radius: 0;
 }
 
-.minimalist-featured-category {
+.blog-featured-category {
   background-color: var(--color-primary);
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -85,32 +85,32 @@
   font-weight: 500;
 }
 
-.minimalist-featured-content {
+.blog-featured-content {
   padding: var(--spacing-lg) 0;
 }
 
-.minimalist-featured-meta {
+.blog-featured-meta {
   order: 1;
   margin-bottom: var(--spacing-sm);
   font-size: 0.8rem;
   color: var(--color-secondary);
 }
 
-.minimalist-featured-title {
+.blog-featured-title {
   order: 2;
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: var(--spacing-md);
 }
 
-.minimalist-featured-excerpt {
+.blog-featured-excerpt {
   order: 3;
   font-size: 1.1rem;
   color: var(--color-text);
   line-height: var(--line-height-paragraph);
 }
 
-.minimalist-featured-read-more {
+.blog-featured-read-more {
   order: 4;
   background-color: transparent;
   color: var(--color-primary);
@@ -123,14 +123,14 @@
   display: inline-block;
 }
 
-.minimalist-featured-read-more:hover {
+.blog-featured-read-more:hover {
   color: var(--color-secondary);
   border-color: var(--color-secondary);
   background-color: transparent;
 }
 
 /* Article list */
-.minimalist-article-list-heading {
+.blog-article-list-heading {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -141,11 +141,11 @@
   padding-bottom: var(--spacing-sm);
 }
 
-.minimalist-article-grid {
+.blog-article-grid {
   row-gap: var(--spacing-xl);
 }
 
-.minimalist-article-item {
+.blog-article-item {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid var(--color-primary-light);
@@ -154,16 +154,16 @@
   transition: transform 0.3s ease;
 }
 
-.minimalist-article-item:hover {
+.blog-article-item:hover {
   transform: var(--article-hover-transform);
   box-shadow: var(--shadow-lg);
 }
 
-.minimalist-article-image-container {
+.blog-article-image-container {
   margin-bottom: var(--spacing-sm);
 }
 
-.minimalist-article-category {
+.blog-article-category {
   background-color: var(--color-primary);
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -172,34 +172,34 @@
   font-weight: 500;
 }
 
-.minimalist-article-content {
+.blog-article-content {
   padding: var(--spacing-sm) 0 0;
 }
 
-.minimalist-article-title {
+.blog-article-title {
   font-weight: 600;
   letter-spacing: -0.01em;
   margin-bottom: var(--spacing-sm);
 }
 
-.minimalist-article-excerpt {
+.blog-article-excerpt {
   font-size: 0.95rem;
   line-height: var(--line-height-paragraph);
   color: var(--color-text);
 }
 
-.minimalist-article-meta {
+.blog-article-meta {
   color: var(--color-secondary);
   font-size: 0.8rem;
   margin-top: var(--spacing-sm);
 }
 
 /* Sidebar */
-.minimalist-sidebar {
+.blog-sidebar {
   margin-top: var(--spacing-lg);
 }
 
-.minimalist-sidebar-section {
+.blog-sidebar-section {
   background-color: transparent;
   border: 1px solid var(--color-primary-light);
   border-radius: 0;
@@ -207,7 +207,7 @@
   margin-bottom: var(--spacing-lg);
 }
 
-.minimalist-sidebar-heading {
+.blog-sidebar-heading {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -216,11 +216,11 @@
   border-bottom: 1px solid var(--color-primary-light);
 }
 
-.minimalist-sidebar-tag-list {
+.blog-sidebar-tag-list {
   margin-top: var(--spacing-md);
 }
 
-.minimalist-sidebar-tag-link {
+.blog-sidebar-tag-link {
   background-color: transparent;
   border: 1px solid var(--color-primary-light);
   padding: 6px 12px;
@@ -228,57 +228,57 @@
   transition: all 0.3s ease;
 }
 
-.minimalist-sidebar-tag-link:hover {
+.blog-sidebar-tag-link:hover {
   background-color: var(--color-primary);
   color: white;
 }
 
-.minimalist-sidebar-popular-item {
+.blog-sidebar-popular-item {
   margin-bottom: var(--spacing-md);
   padding-bottom: var(--spacing-md);
   border-bottom: 1px solid var(--color-primary-light);
 }
 
-.minimalist-sidebar-popular-item:last-child {
+.blog-sidebar-popular-item:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-.minimalist-sidebar-popular-image {
+.blog-sidebar-popular-image {
   border-radius: 0;
 }
 
-.minimalist-sidebar-popular-title {
+.blog-sidebar-popular-title {
   font-weight: 500;
   font-size: 0.9rem;
   margin-bottom: 4px;
 }
 
-.minimalist-sidebar-popular-date {
+.blog-sidebar-popular-date {
   font-size: 0.75rem;
   color: var(--color-secondary);
 }
 
 /* Footer */
-.minimalist-footer {
+.blog-footer {
   background-color: var(--color-white);
   border-top: 1px solid var(--color-primary-light);
   padding-top: var(--spacing-xl);
 }
 
-.minimalist-footer-heading {
+.blog-footer-heading {
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-size: 0.9rem;
 }
 
-.minimalist-footer-text {
+.blog-footer-text {
   line-height: var(--line-height-paragraph);
 }
 
-.minimalist-footer-social-link {
+.blog-footer-social a {
   color: var(--color-primary);
   width: 36px;
   height: 36px;
@@ -289,63 +289,63 @@
   transition: all 0.3s ease;
 }
 
-.minimalist-footer-social-link:hover {
+.blog-footer-social a:hover {
   background-color: var(--color-primary);
   color: white;
   border-color: var(--color-primary);
 }
 
-.minimalist-footer-bottom {
+.blog-footer-bottom {
   padding-top: var(--spacing-md);
   border-top: 1px solid var(--color-primary-light);
   font-size: 0.8rem;
 }
 
-.minimalist-footer-copyright {
+.blog-footer-copyright {
   color: var(--color-secondary);
 }
 
-.minimalist-footer-bottom-link {
+.blog-footer-bottom-link {
   color: var(--color-text);
   transition: color 0.3s ease;
 }
 
-.minimalist-footer-bottom-link:hover {
+.blog-footer-bottom-link:hover {
   color: var(--color-primary);
 }
 
 /* Media Queries */
 @media screen and (max-width: 767px) {
-  .minimalist-featured-article {
+  .blog-featured-article {
     margin-bottom: var(--spacing-lg);
   }
   
-  .minimalist-article-grid {
+  .blog-article-grid {
     gap: var(--spacing-lg);
   }
   
-  .minimalist-footer-content {
+  .blog-footer-content {
     gap: var(--spacing-xl);
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .minimalist-featured-article {
+  .blog-featured-article {
     margin-bottom: var(--spacing-xl);
   }
   
-  .minimalist-article-grid {
+  .blog-article-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .minimalist-featured-article {
+  .blog-featured-article {
     margin-bottom: var(--spacing-xxl);
   }
   
-  .minimalist-article-grid {
+  .blog-article-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl);
   }
