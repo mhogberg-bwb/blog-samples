@@ -7,7 +7,7 @@
     "author": 1,
     "category": 3,
     "tags": ["AI", "Technology", "Future", "Smart Home"],
-    "image": "ai-future.jpg",
+    "image": "/blog-samples/images/articles/ai-future.jpg",
     "publishDate": "2025-02-15T09:30:00Z",
     "readTime": 7,
     "comments": [1, 2]
@@ -20,7 +20,7 @@
     "author": 2,
     "category": 2,
     "tags": ["Urban Planning", "Sustainability", "Environment", "Cities"],
-    "image": "sustainable-city.jpg",
+    "image": "/blog-samples/images/articles/sustainable-city.jpg",
     "publishDate": "2025-03-02T14:15:00Z",
     "readTime": 8,
     "comments": [3]
@@ -33,7 +33,7 @@
     "author": 3,
     "category": 4,
     "tags": ["Hobbies", "Analog", "Technology", "Culture"],
-    "image": "analog-hobbies.jpg",
+    "image": "/blog-samples/images/articles/analog-hobbies.jpg",
     "publishDate": "2025-03-10T11:45:00Z",
     "readTime": 6,
     "comments": [4, 5]
@@ -46,7 +46,7 @@
     "author": 4,
     "category": 1,
     "tags": ["Food", "Culture", "Fusion", "Cuisine"],
-    "image": "pexels-cottonbro-4065891.jpg",
+    "image": "/blog-samples/images/articles/pexels-cottonbro-4065891.jpg",
     "publishDate": "2025-03-18T16:20:00Z",
     "readTime": 5,
     "comments": []
@@ -59,7 +59,7 @@
     "author": 2,
     "category": 2,
     "tags": ["Ocean", "Conservation", "Environment", "Marine Life"],
-    "image": "pexels-ryutaro-5191371.jpg",
+    "image": "/blog-samples/images/articles/pexels-ryutaro-5191371.jpg",
     "publishDate": "2025-01-22T10:00:00Z",
     "readTime": 7,
     "comments": [6]
@@ -72,7 +72,7 @@
     "author": 3,
     "category": 3,
     "tags": ["Design", "Psychology", "Color Theory", "Web Development"],
-    "image": "color-psychology.jpg",
+    "image": "/blog-samples/images/articles/color-psychology.jpg",
     "publishDate": "2025-02-05T13:40:00Z",
     "readTime": 6,
     "comments": []

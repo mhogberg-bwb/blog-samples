@@ -76,17 +76,17 @@ const BlogLayout = ({ theme }) => {
   // Process articles to ensure they have the correct properties for rendering
   const processedArticles = articles.map(article => ({
     ...article,
-    image: article.image || article.featuredImage || 'https://via.placeholder.com/800x400'
+    image: article.image || article.featuredImage || '/images/articles/ai-future.jpg'
   }));
 
   const processedFeaturedArticle = featuredArticle ? {
     ...featuredArticle,
-    image: featuredArticle.image || featuredArticle.featuredImage || 'https://via.placeholder.com/1200x600'
+    image: featuredArticle.image || featuredArticle.featuredImage || '/public/images/articles/ai-future.jpg'
   } : null;
 
   const processedPopularPosts = popularPosts.map(post => ({
     ...post,
-    image: post.image || post.featuredImage || post.thumbnail || 'https://via.placeholder.com/100x100'
+    image: post.image || post.featuredImage || post.thumbnail || '/public/images/articles/ai-future.jpg'
   }));
 
   return (
