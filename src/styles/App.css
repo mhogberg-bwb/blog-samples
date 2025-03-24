@@ -10,10 +10,11 @@
 
 /* App header */
 .app-header {
-  background-color: rgba(65, 117, 172, 0.85); /* Semi-transparent blue */
+  background-color: #000000b5; /*  rgba(65, 117, 172, 0.85); */
   color: white;
   padding: 0.5rem 1rem; /* Reduced padding for more compact header */
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   position: fixed; /* Fixed position */

@@ -67,7 +67,7 @@ function App() {
         <header className="app-header">
           <h1>Blog UI Options</h1>
           <div className="theme-selector">
-            <label htmlFor="theme-select">Select a blog theme:</label>
+            <label htmlFor="theme-select">Select theme:</label>
             <select 
               id="theme-select" 
               value={activeTheme}
