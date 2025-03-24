@@ -90,7 +90,7 @@ const BlogLayout = ({ theme }) => {
   }));
 
   return (
-    <div className={`blog-container blog-theme-${theme}`}>
+    <div className={`blog-container`}>
       <Header 
         title={blogInfo.title} 
         subtitle={blogInfo.subtitle} 

@@ -7,75 +7,50 @@ import './styles/base-styles.css';
 function App() {
   const [activeTheme, setActiveTheme] = useState('classic-news');
   
-  // Force load the base-variables.css file first
-  useEffect(() => {
-    const loadBaseVariables = async () => {
-      await import('./styles/base-variables.css');
-    };
-    loadBaseVariables();
-  }, []);
+  // // Force load the base-variables.css file first (this only needs to be loaded once)
+  // useEffect(() => {
+  //   // Create a link element for base variables if it doesn't exist
+  //   if (!document.getElementById('base-variables-stylesheet')) {
+  //     const baseVarsLink = document.createElement('link');
+  //     baseVarsLink.id = 'base-variables-stylesheet';
+  //     baseVarsLink.rel = 'stylesheet';
+  //     baseVarsLink.href = '/styles/base-variables.css';
+  //     document.head.appendChild(baseVarsLink);
+  //   }
+  // }, []);
   
-  // Dynamic CSS loading based on active theme
+  // Load theme CSS when activeTheme changes
   useEffect(() => {
-    // Reset any previously loaded theme styles
+    // Update the body class for additional theme styling
     document.body.className = `theme-${activeTheme}`;
     
-    // Import CSS based on active theme
-    const loadThemeCSS = async () => {
-      try {
-        // Clear any previous dynamically loaded theme CSS
-        const oldLinks = document.querySelectorAll('link[data-theme]');
-        oldLinks.forEach(link => link.remove());
+    // Function to load a single theme CSS file
+    const loadThemeCSS = (themeName) => {
+      // Check if there's already a theme link element
+      const existingThemeLink = document.getElementById('theme-stylesheet');
+      const themePath = `/styles/themes/${themeName}.css`;
+      
+      if (existingThemeLink) {
+        // If it exists, just update its href attribute
+        existingThemeLink.href = themePath;
+      } else {
+        // If it doesn't exist, create a new link element
+        const linkElement = document.createElement('link');
+        linkElement.id = 'theme-stylesheet';
+        linkElement.rel = 'stylesheet';
+        linkElement.type = 'text/css';
+        linkElement.href = themePath;
         
-        // Import the appropriate theme CSS
-        switch(activeTheme) {
-          case 'classic-news':
-            await import('./styles/themes/classic-news.css');
-            break;
-          case 'minimalist':
-            await import('./styles/themes/minimalist.css');
-            break;
-          case 'card-based':
-            await import('./styles/themes/card-based.css');
-            break;
-          case 'grid-gallery':
-            await import('./styles/themes/grid-gallery.css');
-            break;
-          case 'magazine':
-            await import('./styles/themes/magazine.css');
-            break;
-          case 'tech-blog':
-            await import('./styles/themes/tech-blog.css');
-            break;
-          case 'personal-journal':
-            await import('./styles/themes/personal-journal.css');
-            break;
-          case 'corporate':
-            await import('./styles/themes/corporate.css');
-            break;
-          case 'creative-portfolio':
-            await import('./styles/themes/creative-portfolio.css');
-            break;
-          case 'longform-reading':
-            await import('./styles/themes/longform-reading.css');
-            break;
-          case 'video-centric':
-            await import('./styles/themes/video-centric.css');
-            break;
-          case 'podcast-audio':
-            await import('./styles/themes/podcast-audio.css');
-            break;
-          default:
-            await import('./styles/themes/classic-news.css');
-        }
-        
-        console.log(`Loaded theme: ${activeTheme}`);
-      } catch (error) {
-        console.error(`Error loading theme ${activeTheme}:`, error);
+        // Append it to the document head
+        document.head.appendChild(linkElement);
       }
+      
+      console.log(`Theme switched to: ${themeName}`);
     };
     
-    loadThemeCSS();
+    // Load the active theme
+    loadThemeCSS(activeTheme);
+    
   }, [activeTheme]);
   
   const blogThemes = [
