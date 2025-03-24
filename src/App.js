@@ -28,7 +28,7 @@ function App() {
     const loadThemeCSS = (themeName) => {
       // Check if there's already a theme link element
       const existingThemeLink = document.getElementById('theme-stylesheet');
-      const themePath = `/styles/themes/${themeName}.css`;
+      const themePath = `/blog-samples/styles/themes/${themeName}.css`;
       
       if (existingThemeLink) {
         // If it exists, just update its href attribute
